@@ -17,11 +17,18 @@
             <h1>TODAY</h1>
         </header>
         <div class="container">
-            <!--<p class="date">20xx/01/23</p>-->
             <script type="text/javascript" language="javascript">
                 //日付を表示する
-                document.write('<p class="date">20xx/01/23</p>')
-                document.write(10+3)
+                var today = new Date();
+                var todayHtml = today.getFullYear() + '/' + 
+                (today.getMonth() + 1) + '/' + today.getDate();
+                var newYear = new Date(2019, 1, 1);
+                document.write('<p class="date">20xx/01/23</p>');
+                document.write('今日は ' + today.getDate() + ' 日です。');
+                document.write('<br>');
+                document.write('元旦は ' + newYear.getDate() + ' 日です。');
+                document.write('<p class="date">' + todayHtml + '</p>')
+
             </script>
         </div>
     </body>
